@@ -1,14 +1,17 @@
-/// Queue implementation utilizing 2 stacks (for learning purposes).
+/// # **Queue** implementation
+/// We utilize 2 stacks to implement a Queue (as a learning exercise).
 ///
-/// * The first stack is used for insertion:
-///     * When a value is inserted it goes into the in stack
+/// ## The **first stack** is used for inserting:
 ///
-/// * The second stack is used for popping:
-///     * When a pop is requested, it commes out of the out stack.
-///     * If this stack is empty, then all values of the in stack
-///     are popped and inserted into the out stack (which reverses
-///     the stack order; ensuring they will come out in the original
-///     order they went to the in stack).
+/// When a value is *inserted* it goes directly to the **in stack**.
+///
+///
+/// ## The **second stack** is used for removing:
+///
+/// When a *pop* is requested, it comes from the **out stack**.
+/// * If this stack is empty, then all values from the in stack
+/// are popped and then inserted to the out stack (ensuring they
+/// will come out in the original order they were inserted).
 pub struct Queue<T> {
     in_stack: Vec<T>,
     out_stack: Vec<T>,
